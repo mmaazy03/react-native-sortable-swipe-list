@@ -35,7 +35,11 @@ npm install react-native-reanimated react-native-gesture-handler react-native-wo
 
 # Basic Drag Example
 
-[![Drag Demo](https://img.shields.io/badge/Watch-Drag_Demo-blue?style=for-the-badge)](https://raw.githubusercontent.com/mmaazy03/react-native-sortable-swipe-list/main/assets/Draggable.mp4)
+<video
+src="https://res.cloudinary.com/dsxvnjefn/video/upload/v1781055388/Draggable_ut9nws.mp4"
+controls
+width="320"
+/>
 
 ```tsx
 import React, { useState } from 'react';
@@ -80,7 +84,11 @@ export default function App() {
 
 # Swipe + Drag Example
 
-[![Swipe Demo](https://img.shields.io/badge/Watch-Swipe_Demo-green?style=for-the-badge)](https://raw.githubusercontent.com/mmaazy03/react-native-sortable-swipe-list/main/assets/swipeable+drag.mp4)
+<video
+src="https://res.cloudinary.com/dsxvnjefn/video/upload/v1781055382/swipeable_drag_bijchg.mov"
+controls
+width="320"
+/>
 
 ```tsx
 import React, { useState } from 'react';
@@ -133,102 +141,3 @@ export default function App() {
   );
 }
 ```
-
----
-
-# Core Props
-
-| Prop         | Type                         | Description          |
-| ------------ | ---------------------------- | -------------------- |
-| data         | `T[]`                        | List data            |
-| keyExtractor | `(item:T)=>string`           | Unique item key      |
-| itemHeight   | `number`                     | Fixed row height     |
-| renderItem   | `(item,isActive)=>ReactNode` | Render row item      |
-| onReorder    | `(items,from,to)=>void`      | Called after reorder |
-
----
-
-# Swipe Props
-
-| Prop               | Type                          | Default     | Description                     |
-| ------------------ | ----------------------------- | ----------- | ------------------------------- |
-| swipeable          | `boolean`                     | `false`     | Enable swipe gestures           |
-| swipeDirection     | `'left' \| 'right' \| 'both'` | `'right'`   | Allowed swipe direction         |
-| renderRightActions | `(item)=>ISwipeAction[]`      | `undefined` | Right swipe actions             |
-| renderLeftActions  | `(item)=>ISwipeAction[]`      | `undefined` | Left swipe actions              |
-| actionWidth        | `number`                      | `60`        | Width of each action            |
-| swipeThreshold     | `number`                      | `30`        | Swipe open threshold            |
-| swipeFailOffsetY   | `number`                      | `20`        | Vertical fail threshold         |
-| swipeActiveOffsetX | `number`                      | `10`        | Horizontal activation threshold |
-
----
-
-# Drag Props
-
-| Prop              | Type      | Default | Description           |
-| ----------------- | --------- | ------- | --------------------- |
-| disabled          | `boolean` | `false` | Disable dragging      |
-| longPressDuration | `number`  | `250`   | Drag activation delay |
-| dragScale         | `number`  | `1`     | Active item scale     |
-
----
-
-# Autoscroll Props
-
-| Prop            | Type     | Default        | Description             |
-| --------------- | -------- | -------------- | ----------------------- |
-| autoscrollEdge  | `number` | `90`           | Edge detection distance |
-| autoscrollSpeed | `number` | platform-based | Autoscroll speed        |
-
----
-
-# Haptic Props
-
-| Prop          | Type      | Default        | Description    |
-| ------------- | --------- | -------------- | -------------- |
-| hapticEnabled | `boolean` | `true`         | Enable haptics |
-| hapticStart   | `string`  | `impactMedium` | Start haptic   |
-| hapticEnd     | `string`  | `impactLight`  | End haptic     |
-
----
-
-# Styling Props
-
-| Prop                  |
-| --------------------- |
-| style                 |
-| contentContainerStyle |
-| rowStyle              |
-| rowActiveStyle        |
-| cardWrapStyle         |
-| actionsContainerStyle |
-| actionButtonStyle     |
-| actionLabelStyle      |
-
----
-
-# Separator Props
-
-| Prop            | Type                   | Default       |
-| --------------- | ---------------------- | ------------- |
-| separatorColor  | `string`               | `transparent` |
-| separatorHeight | `number`               | `0`           |
-| separatorStyle  | `StyleProp<ViewStyle>` | `undefined`   |
-
----
-
-# Callbacks
-
-| Prop              | Description                    |
-| ----------------- | ------------------------------ |
-| onDragStart       | Called when drag starts        |
-| onDragEnd         | Called when drag ends          |
-| onDragStateChange | Called when drag state changes |
-| onSwipeOpen       | Called when swipe opens        |
-| onSwipeClose      | Called when swipe closes       |
-
----
-
-# License
-
-MIT
