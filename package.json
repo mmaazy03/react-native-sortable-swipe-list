@@ -38,7 +38,8 @@
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "test": "jest",
-    "release": "release-it --only-version"
+    "release": "release-it --only-version",
+    "build": "bob build"
   },
   "keywords": [
     "react-native",
@@ -107,12 +108,6 @@
         "module",
         {
           "esm": true
-        }
-      ],
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
         }
       ]
     ]
