@@ -35,7 +35,7 @@ npm install react-native-reanimated react-native-gesture-handler react-native-wo
 
 # Basic Drag Example
 
-<video src="https://raw.githubusercontent.com/mmaazy03/react-native-sortable-swipe-list/main/assets/Draggable.mp4" controls width="320" />
+[![Drag Demo](https://img.shields.io/badge/Watch-Drag_Demo-blue?style=for-the-badge)](https://raw.githubusercontent.com/mmaazy03/react-native-sortable-swipe-list/main/assets/Draggable.mp4)
 
 ```tsx
 import React, { useState } from 'react';
@@ -80,7 +80,7 @@ export default function App() {
 
 # Swipe + Drag Example
 
-<video src="https://raw.githubusercontent.com/mmaazy03/react-native-sortable-swipe-list/main/assets/swipeable+drag.mp4" controls width="320" />
+[![Swipe Demo](https://img.shields.io/badge/Watch-Swipe_Demo-green?style=for-the-badge)](https://raw.githubusercontent.com/mmaazy03/react-native-sortable-swipe-list/main/assets/swipeable+drag.mp4)
 
 ```tsx
 import React, { useState } from 'react';
