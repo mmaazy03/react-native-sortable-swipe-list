@@ -6,16 +6,16 @@ A performant React Native sortable drag-and-drop list with built-in swipe action
 
 ## Features
 
-- ✅ Drag & Drop Sorting
-- ✅ Swipe Actions
-- ✅ Reanimated Powered
-- ✅ Gesture Handler Integrated
-- ✅ Auto Scroll While Dragging
-- ✅ TypeScript Support
-- ✅ Haptic Feedback
-- ✅ iOS & Android
-- ✅ FlatList-like API
-- ✅ Highly Customizable
+* ✅ Drag & Drop Sorting
+* ✅ Swipe Actions
+* ✅ Reanimated Powered
+* ✅ Gesture Handler Integrated
+* ✅ Auto Scroll While Dragging
+* ✅ TypeScript Support
+* ✅ Haptic Feedback
+* ✅ iOS & Android
+* ✅ FlatList-like API
+* ✅ Highly Customizable
 
 ---
 
@@ -34,6 +34,8 @@ npm install react-native-reanimated react-native-gesture-handler react-native-wo
 ---
 
 # Basic Drag Example
+
+<video src="https://raw.githubusercontent.com/mmaazy03/react-native-sortable-swipe-list/main/assets/Draggable.mp4" controls width="320" />
 
 ```tsx
 import React, { useState } from 'react';
@@ -77,6 +79,8 @@ export default function App() {
 ---
 
 # Swipe + Drag Example
+
+<video src="https://raw.githubusercontent.com/mmaazy03/react-native-sortable-swipe-list/main/assets/swipeable+drag.mp4" controls width="320" />
 
 ```tsx
 import React, { useState } from 'react';
