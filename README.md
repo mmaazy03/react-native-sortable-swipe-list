@@ -16,6 +16,8 @@ A performant React Native sortable drag-and-drop list with built-in swipe action
 * ✅ iOS & Android
 * ✅ FlatList-like API
 * ✅ Highly Customizable
+* ✅ Smooth Gesture Coordination
+* ✅ Dynamic Swipe Actions
 
 ---
 
@@ -141,3 +143,147 @@ export default function App() {
   );
 }
 ```
+
+---
+
+# ISwipeAction
+
+```ts
+interface ISwipeAction {
+  key: string;
+  onPress: () => void;
+  icon?: React.ReactNode;
+  label?: string;
+  labelStyle?: StyleProp<TextStyle>;
+  style?: StyleProp<ViewStyle>;
+  backgroundColor?: string;
+  borderColor?: string;
+}
+```
+
+---
+
+# Core Props
+
+| Prop         | Type                         | Description          |
+| ------------ | ---------------------------- | -------------------- |
+| data         | `T[]`                        | List data            |
+| keyExtractor | `(item:T)=>string`           | Unique item key      |
+| itemHeight   | `number`                     | Fixed row height     |
+| renderItem   | `(item,isActive)=>ReactNode` | Render row item      |
+| onReorder    | `(items,from,to)=>void`      | Called after reorder |
+
+---
+
+# Swipe Props
+
+| Prop               | Type                          | Default     | Description                     |
+| ------------------ | ----------------------------- | ----------- | ------------------------------- |
+| swipeable          | `boolean`                     | `false`     | Enable swipe gestures           |
+| swipeDirection     | `'left' \| 'right' \| 'both'` | `'right'`   | Allowed swipe direction         |
+| renderRightActions | `(item)=>ISwipeAction[]`      | `undefined` | Right swipe actions             |
+| renderLeftActions  | `(item)=>ISwipeAction[]`      | `undefined` | Left swipe actions              |
+| actionWidth        | `number`                      | `60`        | Width of each action            |
+| swipeThreshold     | `number`                      | `30`        | Swipe open threshold            |
+| swipeFailOffsetY   | `number`                      | `20`        | Vertical fail threshold         |
+| swipeActiveOffsetX | `number`                      | `10`        | Horizontal activation threshold |
+
+---
+
+# Drag Props
+
+| Prop              | Type      | Default | Description           |
+| ----------------- | --------- | ------- | --------------------- |
+| disabled          | `boolean` | `false` | Disable dragging      |
+| longPressDuration | `number`  | `250`   | Drag activation delay |
+| dragScale         | `number`  | `1`     | Active item scale     |
+
+---
+
+# Autoscroll Props
+
+| Prop            | Type     | Default        | Description                     |
+| --------------- | -------- | -------------- | ------------------------------- |
+| autoscrollEdge  | `number` | `90`           | Edge detection distance         |
+| autoscrollSpeed | `number` | Platform Based | Autoscroll speed while dragging |
+
+---
+
+# Spring Props
+
+| Prop         | Type                                                | Description                    |
+| ------------ | --------------------------------------------------- | ------------------------------ |
+| springConfig | `{ damping:number; stiffness:number; mass:number }` | Spring animation configuration |
+
+---
+
+# Haptic Props
+
+| Prop          | Type      | Default        | Description                    |
+| ------------- | --------- | -------------- | ------------------------------ |
+| hapticEnabled | `boolean` | `true`         | Enable haptic feedback         |
+| hapticStart   | `string`  | `impactMedium` | Haptic triggered on drag start |
+| hapticEnd     | `string`  | `impactLight`  | Haptic triggered on drag end   |
+
+---
+
+# Styling Props
+
+| Prop                  | Type                   |
+| --------------------- | ---------------------- |
+| style                 | `StyleProp<ViewStyle>` |
+| contentContainerStyle | `StyleProp<ViewStyle>` |
+| rowStyle              | `StyleProp<ViewStyle>` |
+| rowActiveStyle        | `StyleProp<ViewStyle>` |
+| cardWrapStyle         | `StyleProp<ViewStyle>` |
+| actionsContainerStyle | `StyleProp<ViewStyle>` |
+| actionButtonStyle     | `StyleProp<ViewStyle>` |
+| actionLabelStyle      | `StyleProp<TextStyle>` |
+| rowBackgroundColor    | `string`               |
+
+---
+
+# Separator Props
+
+| Prop            | Type                   | Default       |
+| --------------- | ---------------------- | ------------- |
+| separatorColor  | `string`               | `transparent` |
+| separatorHeight | `number`               | `0`           |
+| separatorStyle  | `StyleProp<ViewStyle>` | `undefined`   |
+
+---
+
+# Pass-through Props
+
+| Prop                 | Type                 |
+| -------------------- | -------------------- |
+| refreshControl       | `React.ReactElement` |
+| ListEmptyComponent   | `React.ReactNode`    |
+| ListHeaderComponent  | `React.ReactNode`    |
+| contentPaddingBottom | `number`             |
+
+---
+
+# Callbacks
+
+| Prop              | Description                    |
+| ----------------- | ------------------------------ |
+| onDragStart       | Called when drag starts        |
+| onDragEnd         | Called when drag ends          |
+| onDragStateChange | Called when drag state changes |
+| onSwipeOpen       | Called when swipe opens        |
+| onSwipeClose      | Called when swipe closes       |
+
+---
+
+# Requirements
+
+* React Native >= 0.72
+* React Native Reanimated >= 4
+* React Native Gesture Handler >= 2.20
+
+---
+
+# License
+
+MIT
